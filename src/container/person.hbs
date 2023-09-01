@@ -1,0 +1,134 @@
+<div>
+
+  <div>
+    {{#with person}}
+      <h1>{{name}}</h1>
+      <p>
+        <b>age: </b>{{age}}<br>
+        <b>gender: </b>{{gender}}
+      </p>
+  </div>
+
+    <section>
+      <div>
+        {{#with address}}
+          {{> title data="Addreclearss" big=true}}
+          <div>
+            <address>
+              <b>street: </b>{{street}}<br>
+              <b>city: </b>{{city}}<br>
+              <b>state: </b><abbr>{{state}}</abbr><br>
+              <b>zip: </b>{{zip}}<br>
+              <b>country: </b><abbr>{{country}}</abbr>
+            </address>
+          </div>
+        {{/with}}
+      </div>
+    </section>
+
+    <section>
+      <div>
+        {{#each education}}
+        {{> title data="Education" big=true}}
+          <div>
+            <b>degree: </b>{{degree}}<br>
+            <b>major: </b>{{major}}<br>
+            <b>university: </b>{{university}}<br>
+            <b>graduation year: </b>{{graduationYear}}
+          </div>
+        {{/each}}
+      </div>  
+    </section>
+
+    <section>
+      <div>
+        {{#each workExperience}}
+        {{> title data="WorkExperience" big=true}}
+          <div>
+            <h3>company: {{company}}</h3>
+            <hr />
+            <b>title: </b>{{title}}<br>
+            <hr />
+            <b>startDate: </b>{{startDate}}<br>
+            <b>endDate: </b>{{endDate}}<br>
+          </div>
+            <hr />
+          <div>
+            <h3>responsibilities: </h3>
+            <p>Developed new features for Google Maps<br>
+              Worked on improving search algorithms</p>
+            <hr />
+            <b>year_founded: </b>{{year_founded}}<br><br>
+            <hr />
+            <b>industry: </b>{{industry}}<br>
+          </div>
+            <hr />
+          <div>
+            <h3>employees:</h3><br>
+            {{#each employees}}
+            {{name}}<br><br>
+            <b>position: </b><abbr>{{position}}</abbr><br><br>
+            <b>department: </b>{{department}}
+          </div>
+            <hr />
+          <div>
+            <h3>projects:</h3> {{#each projects}}<br>
+            {{name}}<br><br>
+            <b>description: </b>{{description}}<br><br>
+            <b>status: </b>{{status}}<br>
+          </div>
+            <hr />
+          <div>
+            <h3>teams:</h3><br>
+            {{#each teams}}
+            {{team_name}}<br>
+          </div>
+            <hr />
+          <div>
+            <h3>team_leader:</h3><br>
+            {{#with team_leader}}
+            {{name}}<br><br>
+            <b>title: </b>{{title}}<br>
+            <b>email: </b>{{email}}<br>
+            {{/with}}
+          </div>
+            <hr />
+          <div>
+            <h3>team_members:</h3><br>
+            {{#each team_members}}     
+            {{name}}<br><br>
+            <b>title: </b>{{title}}<br>
+            <b>email: </b>{{email}}<br>
+            <b>skills: </b>{{skills}}<br>
+          </div>
+            <hr />
+          <div>
+            <h3>projects:</h3><br>
+            {{#each projects}}
+            {{name}}<br><br>
+            <b>description: </b>{{description}}<br>
+          </div>
+            <hr />
+          <div>
+            <h3>technologies:</h3><br>
+              Java<br>
+              Spring Framework<br>
+          </div>
+            <hr />
+          <div>
+            <h3>team_members:</h3><br>
+            {{#each team_members}}
+            {{name}}<br>
+            {{title}}<br><br>
+            {{/each}}
+          </div>
+            {{/each}}
+            {{/each}}
+            {{/each}}
+            {{/each}}
+            {{/each}}
+          {{/each}}
+      </div>
+    </section>
+  {{/with}}
+</div>
