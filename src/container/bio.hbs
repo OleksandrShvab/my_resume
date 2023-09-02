@@ -1,0 +1,221 @@
+<div>
+  <section>
+    <h1>{{name}}</h1>
+    <p>
+      <div>
+        <h3>birthdate: </h3>
+        <a>{{birthdate}}</a>
+      </div>
+      <hr />
+      <div>
+        <h3>birthplace: </h3>
+        <a>{{birthplace}}</a>
+      </div>
+      <hr />
+      <div>
+        <h3>deathdate: </h3>
+        <a>{{deathdate}}</a>
+      </div>
+      <hr />
+      <div>
+        <h3>deathplace: </h3>
+        <a>{{deathplace}}</a>
+      </div>
+      <hr />
+      <div>
+        <h3>nationality: </h3>
+        <a>{{nationality}}</a>
+      </div>
+      <hr />
+      <div>
+        <h3>occupation: </h3>
+        <a></a>{{occupation}}
+      </div>
+      <hr />
+      <div>
+        <h3>known_for:</h3>
+        <a>Theory of Relativity</a>
+        <br />
+        <a>E=mc²</a>
+        <br />
+        <a>Photoelectric Effect</a>
+        <br />
+        <a>Brownian Motion</a>
+        <br />
+      </div>
+      <hr />
+      <div>
+        <h3>education:</h3>
+        {{#each education}}
+          <a>
+            <b>degree: </b>
+            {{degree}}
+          </a>
+          <br />
+          <a>
+            <b>field: </b>
+            {{field}}
+          </a>
+          <br />
+          <a>
+            <b>institution: </b>
+            {{institution}}
+          </a>
+          <br />
+          <a>
+            <b>year: </b>
+            {{year}}
+          </a>
+        {{/each}}
+      </div>
+      <hr />
+      <div>
+        <h3>notable_publications:</h3>
+        {{#each notable_publications}}
+          <a>
+            <b>title: </b>
+            {{title}}
+          </a>
+          <br />
+          <a>
+            <b>year: </b>
+            {{year}}
+          </a>
+          <br />
+          <a>
+            <b>publisher: </b>
+            {{publisher}}
+          </a>
+          <br /><br />
+        {{/each}}
+      </div>
+      <hr />
+      <div>
+        <h3>partners:</h3>
+        {{#each partners}}
+          <a>
+            <b>name: </b>
+            {{name}}
+          </a>
+          <br />
+          <a>
+            <b>relationship: </b>
+            {{relationship}}
+          </a>
+          <br />
+          <a>
+            <b>years: </b>
+            {{years}}
+          </a>
+          <br /><br />
+        {{/each}}
+      </div>
+      <hr />
+      <div>
+        <h3>awards:</h3>
+        {{#each awards}}
+          <a>
+            <b>title: </b>
+            {{title}}
+          </a>
+          <br />
+          <a>
+            <b>year: </b>
+            {{year}}
+          </a>
+          <br />
+          <a>
+            <b>description: </b>
+            {{description}}
+          </a>
+        {{/each}}
+      </div>
+      <hr />
+      <div>
+        <h3>influences:</h3>
+        <a>Isaac Newton</a>
+        <br />
+        <a>James Clerk Maxwell</a>
+        <br />
+        <a>Hermann Minkowski</a>
+        <br />
+      </div>
+      <hr />
+      <div>
+        <h3>influenced:</h3>
+        <a>Niels Bohr</a>
+        <br />
+        <a>Erwin Schrödinger</a>
+        <br />
+        <a>Werner Heisenberg</a>
+        <br />
+        <a>Richard Feynman</a>
+        <br />
+      </div>
+      <hr />
+      <div>
+        <h3>quotes:</h3>
+        <q>Imagination is more important than knowledge.</q>
+        <br />
+        <q>I have no special talent. I am only passionately
+          curious.</q>
+        <br />
+        <q>The important thing is not to stop questioning.</q>
+        <br />
+        <q>The most beautiful thing we can experience is the
+          mysterious. It is the source of all true art and
+          all science.</q>
+        <br />
+      </div>
+      <hr />
+      <div>
+        <h3>major_discoveries:</h3>
+        {{#each major_discoveries}}
+          <a>
+            <b>title: </b>
+            {{title}}
+          </a>
+          <br />
+          <a>
+            <b>year: </b>
+            {{year}}
+          </a>
+          <br />
+          <a>
+            <b>description: </b>
+            {{description}}
+          </a>
+        {{/each}}
+      </div>
+      <hr />
+      <div>
+        <h3>contributions:</h3>
+        {{#with contributions}}
+          <a>
+            <b>title: </b>
+            {{title}}
+          </a>
+          <br />
+          <a>
+            <b>description: </b>
+            {{description}}
+          </a>
+          <br />
+          <a>
+            <b>year: </b>
+            {{year}}
+          </a>
+          <br />
+          <a>
+            <b>field: </b>
+            {{field}}
+          </a>
+        {{/with}}
+      </div>
+    </p>
+  </section>
+
+  <section>
+
+  </section>
+</div>
