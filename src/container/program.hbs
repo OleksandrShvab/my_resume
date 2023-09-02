@@ -1,0 +1,26 @@
+<div>
+  {{#with program}}
+  {{#with excursion}}
+  <section>
+    <h1>{{name}}</h1>
+    <p>
+      <div>
+        <h3>location: </h3>
+        {{#with location}}
+        <div>
+          <b>city: </b>
+          <a>{{city}}</a>
+          <br>
+          <b>country: </b>
+          <a>{{country}}</a>
+        </div>
+      </div>
+      <hr />
+
+      </div>
+    </p>
+  </section>
+  {{/with}}
+  {{/with}}
+  {{/with}}
+</div>
