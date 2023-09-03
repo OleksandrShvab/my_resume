@@ -1,4 +1,4 @@
-<div>
+
     {{#with program}}
       {{#with excursion}}
         <h1>Excursion <q>{{name}}</q></h1>
@@ -28,9 +28,15 @@
             {{#each program}}
               <div>
                 <b>name:</b>
-                <a>{{name}}</a><br />
+                <a>{{name}}</a>
+                
+                <br />
+
                 <b>type:</b>
-                <a>{{type}}</a><br />
+                <a>{{type}}</a>
+                
+                <br />
+                
                 <b>duration:</b>
                 <a>{{duration}}</a>
               </div>
@@ -51,9 +57,15 @@
                         {{#with location}}
                           <div>
                             <b>address:</b>
-                            <a>{{address}}</a><br />
+                            <a>{{address}}</a>
+                            
+                            <br />
+
                             <b>city:</b>
-                            <a>{{city}}</a><br />
+                            <a>{{city}}</a>
+                            
+                            <br />
+
                             <b>country:</b>
                             <a>{{country}}</a>  
                           </div>
@@ -61,7 +73,7 @@
 
                         <br>
 
-                        <h>exhibits: </h3>
+                        <h3>exhibits: </h3>
                           {{#each exhibits}}
                             <div>
                               <b>name:</b>
@@ -74,6 +86,7 @@
                               <a>{{audio_guide}}</a><br /><br />
                             </div>
                           {{/each}}
+                      </div>
                     {{/with}}
                       
 
@@ -93,7 +106,7 @@
 
                     <hr />
 
-                {{/with}}   
+                {{/with}}
                
                 </div>
             
@@ -154,8 +167,7 @@
                                     <a>{{rating}}</a>
                                   </div>
                                 {{/with}}
-                            {{/with}}    
-            {{/each}}  
+                            {{/with}} 
+            {{/each}}
       {{/with}}
     {{/with}}
-</div>
