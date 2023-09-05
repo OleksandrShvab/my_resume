@@ -1,0 +1,53 @@
+<div>
+  {{#with web}}
+    {{#if languages}}<h1>languages: </h1>{{/if}}
+    {{#each languages}}
+      <h2>{{name}}</h2>
+      <p>
+        <b>version: </b>{{version}}<br />
+        <br />
+        <b>description: </b>{{description}}<br />
+        <br />
+        {{#if elements}}<h3>elements: </h3>{{/if}}
+        {{#each elements}}<br />
+          <h3>{{name}}</h3><br />
+          <b>description: </b>{{description}}<br />
+          <br />
+          <h4>attributes: </h4>{{#each attributes}}<br />
+            <a>{{name}}</a><br />
+            <b>description: </b>{{description}}<br />
+          {{/each}}
+        {{/each}}
+
+      </p>
+      <br />
+      <p>
+        {{#if properties}}<h2>properties: </h2>{{/if}}
+        {{#each properties}}<br />
+          <a>{{name}}</a><br />
+          <b>description: </b>{{description}}<br />
+          <br />
+          <b>values: </b>{{#each values}}<br />
+            <br />
+            <b>value: </b>{{value}}<br />
+            <b>description: </b>{{description}}<br />
+          {{/each}}
+        {{/each}}
+      </p>
+      <p>
+        {{#if functions}}<h2>functions: </h2>{{/if}}
+        {{#each functions}}<br />
+          <a>{{name}}</a><br />
+          <b>description: </b>{{description}}<br />
+          <br />
+          <b>parameters: </b>{{#each parameters}}<br />
+            <br />
+            <b>name: </b>{{name}}<br />
+            <b>type: </b>{{type}}<br />
+            <b>description: </b>{{description}}<br />
+          {{/each}}
+        {{/each}}
+      </p>
+    {{/each}}
+  {{/with}}
+</div>
