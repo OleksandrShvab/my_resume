@@ -44,11 +44,12 @@
               <hr />
 
               <div>
-                <h3>details: </h3>
+                {{#if details}}<h3>details: </h3>{{/if}} 
                 {{#with details}}
                   <div>
-                    <b>museum:</b>
+                    {{#if museum}}<b>museum: </b>{{/if}} 
                     {{#with museum}}
+
                       <a>{{name}}</a></div>
 
                       <br />
@@ -88,11 +89,10 @@
                           {{/each}}
                       </div>
                     {{/with}}
-                      
+                     
 
                     <hr />
-
-                    <h3>guide: </h3>
+                    {{#if guide}}<h3>guide: </h3>{{/if}}
                     {{#with guide}}
                       <div>
                         <b>name:</b>
@@ -111,6 +111,8 @@
                 </div>
             
                 <div>
+
+                <div>
                   <a>{{name}}</a>
                 </div>
       
@@ -119,10 +121,10 @@
                   <a>{{type}}</a><br />
                   <b>duration:</b>
                   <a>{{duration}}</a><br />
-                          <h3>details: </h3>
+                  {{#if details}} <h3>details: </h3>{{/if}}
                             {{#with details}}
                               <div>
-                                <b>venue:</b>
+                                {{#if venue}}<b>venue: </b>{{/if}} 
                                 {{#with venue}}
                                   <a>{{name}}</a><br />
                                     </div>
@@ -144,7 +146,7 @@
 
                                 <hr />
 
-                                <h4>performers: </h4>
+                                {{#if performers}}<h4>performers: </h4>{{/if}}
                                 {{#each performers}}
                                   <div>
                                     <b>name:</b>
@@ -156,7 +158,7 @@
 
                                 <hr />
 
-                                <h3>guide: </h3>
+                                {{#if guide}}<h4>guide: </h4>{{/if}}
                                 {{#with guide}}
                                   <div>
                                     <b>name:</b>
@@ -167,7 +169,8 @@
                                     <a>{{rating}}</a>
                                   </div>
                                 {{/with}}
-                            {{/with}} 
-            {{/each}}
-      {{/with}}
-    {{/with}}
+                            {{/with}}
+                            </div>
+                          {{/each}}
+                    {{/with}}
+                  {{/with}}
