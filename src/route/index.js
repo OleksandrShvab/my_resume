@@ -643,8 +643,7 @@ router.get('/bootstrap', function (req, res) {
   res.render('bootstrap', {
     layout: 'bootstrap',
   })
-router.get('/js', function (req, res) {
-})
+  router.get('/js', function (req, res) {})
 })
 // ================================================================
 
@@ -961,7 +960,7 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
-  }),
+  })
 })
 
 // ================================================================
@@ -1057,11 +1056,9 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-  }),
+  })
 })
 
 // ================================================================
-
-
 
 module.exports = router
