@@ -1,0 +1,110 @@
+<div>
+  <div>
+    <h1>{{name}}</h1>
+    <p>
+      <b>description: </b>{{description}}
+      <br />
+      <br />
+      <b>history: </b>{{#with history}}<br />
+        <b>year: </b>{{year}}<br />
+        <b>founder: </b>{{founder}}
+      {{/with}}
+    </p>
+  </div>
+
+  <hr />
+
+  <div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        types
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Number</a></li>
+        <li><a class="dropdown-item" href="#">String</a></li>
+        <li><a class="dropdown-item" href="#">Boolean</a></li>
+        <li><a class="dropdown-item" href="#">Null</a></li>
+        <li><a class="dropdown-item" href="#">Undefined</a></li>
+        <li><a class="dropdown-item" href="#">Symbol</a></li>
+        <li><a class="dropdown-item" href="#">Object</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div></div>
+    <p>
+      <b>syntax: </b>{{#with syntax}}<br />
+        <b>variables: </b>{{variables}}<br />
+        <b>functions: </b>{{functions}}<br />
+        <b>conditionals: </b>{{conditionals}}<br />
+        <b>loops: </b>{{loops}}<br />
+        <b>classes: </b>{{classes}}<br />
+      {{/with}}
+    </p>
+  </div>
+
+  <hr />
+
+  <div>
+    <p>
+      <b>features: </b><br />
+      First-class functions<br />
+      Closures<br />
+      Dynamic typing<br />
+      Prototype-based inheritance<br />
+      Asynchronous programming with Promises and async/await
+      <br />
+      Modules with import/export statements<br />
+    </p>
+  </div>
+
+  <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        libraries
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">jQuery</a></li>
+        <li><a class="dropdown-item" href="#">React</a></li>
+        <li><a class="dropdown-item" href="#">Angular</a></li>
+        <li><a class="dropdown-item" href="#">Vue</a></li>
+        <li><a class="dropdown-item" href="#">Node.js</a></li>
+        <li><a class="dropdown-item" href="#">Express.js</a></li>
+        <li><a class="dropdown-item" href="#">Lodash</a></li>
+        <li><a class="dropdown-item" href="#">Moment.js</a></li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        tools
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Babel</a></li>
+        <li><a class="dropdown-item" href="#">Webpack</a></li>
+        <li><a class="dropdown-item" href="#">ESLint</a></li>
+        <li><a class="dropdown-item" href="#">Jest</a></li>
+        <li><a class="dropdown-item" href="#">Mocha</a></li>
+        <li><a class="dropdown-item" href="#">Chai</a></li>
+        <li><a class="dropdown-item" href="#">Selenium</a></li>
+        <li><a class="dropdown-item" href="#">Cypress</a></li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <p>
+      <b>community: </b>{{#each community}}<br />
+      <br />
+        <b>{{name}}</b><br />
+        <b>type: </b>{{type}}<br />
+      {{/each}}
+      </p>
+    </div>
+</div>
