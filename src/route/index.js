@@ -329,11 +329,7 @@ router.get('/person', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
     layout: 'basic',
     name: 'Albert Einstein',
@@ -429,10 +425,7 @@ router.get('/bio', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
 router.get('/program', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'basic',
     program: {
@@ -517,10 +510,7 @@ router.get('/program', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
 router.get('/web', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'basic',
     web: {
@@ -649,22 +639,16 @@ router.get('/web', function (req, res) {
 
 // ================================================================
 
-
-
 router.get('/bootstrap', function (req, res) {
-
   res.render('bootstrap', {
     layout: 'bootstrap',
   })
 router.get('/js', function (req, res) {
-
-
-
-
+})
+})
 // ================================================================
 
-
-  //            ↙ cюди вводимо назву файлу з сontainer
+router.get('/js', function (req, res) {
   res.render('js', {
     layout: 'basic',
     name: 'JavaScript',
@@ -742,15 +726,7 @@ router.get('/js', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-facebook
 router.get('/mac', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'basic',
     name: 'Apple MacBook Pro',
@@ -831,19 +807,11 @@ router.get('/mac', function (req, res) {
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
 
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
 router.get('/facebook', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
     layout: 'basic',
     name: 'Facebook',
@@ -993,11 +961,10 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
-=======
-router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
+  }),
+})
 
-  //            ↙ cюди вводимо назву файлу з сontainer
+router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'basic',
     make: 'Toyota',
@@ -1088,11 +1055,11 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-main
-  })
-  //                  ↑↑ сюди вводимо JSON дані
+  }),
 })
 
 // ================================================================
+
+
 
 module.exports = router
