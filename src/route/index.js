@@ -643,7 +643,6 @@ router.get('/bootstrap', function (req, res) {
   res.render('bootstrap', {
     layout: 'bootstrap',
   })
-  router.get('/js', function (req, res) {})
 })
 // ================================================================
 
@@ -1183,6 +1182,13 @@ router.get('/task22', function (req, res) {
   })
 })
 
+// ================================================================
+
+router.get('/bootstrapNew', function (req, res) {
+  res.render('bootstrapNew', {
+    layout: 'bootstrap',
+  })
+})
 // ================================================================
 
 module.exports = router
