@@ -118,23 +118,17 @@
 
     <hr />
 
-    <div class="row">
-      {{#each footer}}
-        <section class="col-2">
+
           <div class="nav">
-            {{#each .}}
-              <div class="nav-item flex-column p-1">
-                <a
-                  href={{link}}
-                  class='nav nav-link'
-                  >{{text}}
-                </a>
-                <br />
-                <br />
+            {{#each footer}}
+              <div class="nav-item col-2">
+                {{#each this}}
+                  <a
+                    href="{{link}}"
+                    class='nav-link {{#if @last}}
+                    disabled{{/if}}'>{{text}}</a>
+                {{/each}}
               </div>
             {{/each}}
           </div>
-        </section>
-      {{/each}}
-    </div>
 </main>
