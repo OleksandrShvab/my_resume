@@ -2,8 +2,7 @@
   <h1 class='text-center text-uppercase'>Hello world</h1>
   <h2 class='text-end text-lowercase'>Hello World</h2>
   <h3 class='text-capitalize'>Hello world hello world hello
-    world</h3>
-
+    world<
   <hr />
 
   <div class='display-1 text-muted'>Hello World</div>
@@ -59,17 +58,17 @@
 <hr />
 
 
-  <div class='card'>
-    <img
-      class='card-img-top'
-      src='https://picsum.photos/400/200?grayscale'
-      alt='Product photo'
-    />
-    <div class='card body'>
-      <h5 class='card-title'>Product 4848484</h5>
-      <p>Hello World</p>
-      <a href='/summary' class='btn btn-primary'>Open</a>
-    </div>
+    <div class='card'>
+        <img
+        class='card-img-top'
+        src='https://picsum.photos/400/200?grayscale'
+        alt='Product photo'
+        />
+        <div class='card body'>
+            <h5 class='card-title'>Product 4848484</h5>
+            <p>Hello World</p>
+            <a href='/summary' class='btn btn-primary'>Open</a>
+        </div>
     </div>
 
     <br />
@@ -472,7 +471,7 @@
 
 
 </main>
-
+AAAAAAA
 <main class='p-3'>
   <div class='row g-5'>
     <div class='col-12'>
@@ -520,6 +519,25 @@
   </div>
 
   <hr />
+
+    <select multiple class="form-select" id="sel2" name="sellist2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+
+    <div class="col-3 mb-5">
+        <select class='form-select'>
+        <option selected>{{placeholder}}</option>
+        {{#each options}}
+            <option value={{value}}>{{text}}</option>
+        {{/each}}
+        </select>
+    </div>
+
+
 
     <div class='col-12 mb-3'>
         <label class='form-label'>Select role</label>
