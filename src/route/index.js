@@ -30,8 +30,154 @@ var footer = {
 }
 // ================================================================
 router.get('/', function (req, res) {
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    data: {
+      full_name: {
+        firstname: {
+          title: "Ім'я",
+          value: 'Олександр',
+        },
+        patronymic: {
+          title: 'По-батькові',
+          value: 'Леонідович',
+        },
+        surname: {
+          title: 'Прізвище',
+          value: 'Шваб',
+        },
+      },
+      name_project: 'Resume project',
+    },
+    content: {
+      title: 'Список сторінок',
+      description: `Тут вам потрібно написати інформацію про ваш проєкт.
+          Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+          Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+          Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+          Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+          Поки що можна написати будь-який текст.`,
+    },
+    buttons: [
+      {
+        text: 'Index',
+        link: '/summary',
+        isWarning: true,
+      },
+      {
+        text: 'bio',
+        link: '/bio',
+        isLight: true,
+      },
+      {
+        text: 'car',
+        link: '/car',
+        isLight: true,
+      },
+      {
+        text: 'education',
+        link: '/education',
+        isLight: true,
+      },
+      {
+        text: 'facebook',
+        link: '/facebook',
+        isLight: true,
+      },
+      {
+        text: 'js',
+        link: '/js',
+        isLight: true,
+      },
+      {
+        text: 'mac',
+        link: '/mac',
+        isLight: true,
+      },
+      {
+        text: 'person',
+        link: '/person',
+        isLight: true,
+      },
+      {
+        text: 'program',
+        link: '/program',
+        isLight: true,
+      },
+      {
+        text: 'shopcart',
+        link: '/shopcart',
+        isLight: true,
+      },
+      {
+        text: 'shopcatalog',
+        link: '/shopcatalog',
+        isLight: true,
+      },
+      {
+        text: 'shophome',
+        link: '/shophome',
+        isLight: true,
+      },
+      {
+        text: 'shoporder',
+        link: '/shoporder',
+        isLight: true,
+      },
+      {
+        text: 'shopprofile',
+        link: '/shopprofile',
+        isLight: true,
+      },
+      {
+        text: 'shopreview',
+        link: '/shopreview',
+        isLight: true,
+      },
+      {
+        text: 'skills',
+        link: '/skills',
+        isLight: true,
+      },
+      {
+        text: 'summary',
+        link: '/summary',
+        isLight: true,
+      },
+      {
+        text: 'task21',
+        link: '/task21',
+        isLight: true,
+      },
+      {
+        text: 'task22',
+        link: '/task22',
+        isLight: true,
+      },
+      {
+        text: 'task31',
+        link: '/task31',
+        isLight: true,
+      },
+      {
+        text: 'web',
+        link: '/web',
+        isLight: true,
+      },
+      {
+        text: 'work',
+        link: '/work',
+        isLight: true,
+      },
+      {
+        text: 'error',
+        link: '/error',
+        isDanger: true,
+      },
+    ],
+  })
 })
+
 // ================================================================
 router.get('/summary', function (req, res) {
   res.render('summary', {
