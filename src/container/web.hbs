@@ -1,53 +1,104 @@
-<div>
-  {{#with web}}
-    {{#if languages}}<h1>languages: </h1>{{/if}}
-    {{#each languages}}
-      <h2>{{name}}</h2>
-      <p>
-        <b>version: </b>{{version}}<br />
-        <br />
-        <b>description: </b>{{description}}<br />
-        <br />
-        {{#if elements}}<h3>elements: </h3>{{/if}}
-        {{#each elements}}<br />
-          <h3>{{name}}</h3><br />
-          <b>description: </b>{{description}}<br />
-          <br />
-          <h4>attributes: </h4>{{#each attributes}}<br />
-            <a>{{name}}</a><br />
-            <b>description: </b>{{description}}<br />
-          {{/each}}
-        {{/each}}
-
-      </p>
-      <br />
-      <p>
-        {{#if properties}}<h2>properties: </h2>{{/if}}
-        {{#each properties}}<br />
-          <a>{{name}}</a><br />
-          <b>description: </b>{{description}}<br />
-          <br />
-          <b>values: </b>{{#each values}}<br />
-            <br />
-            <b>value: </b>{{value}}<br />
-            <b>description: </b>{{description}}<br />
-          {{/each}}
-        {{/each}}
-      </p>
-      <p>
-        {{#if functions}}<h2>functions: </h2>{{/if}}
-        {{#each functions}}<br />
-          <a>{{name}}</a><br />
-          <b>description: </b>{{description}}<br />
-          <br />
-          <b>parameters: </b>{{#each parameters}}<br />
-            <br />
-            <b>name: </b>{{name}}<br />
-            <b>type: </b>{{type}}<br />
-            <b>description: </b>{{description}}<br />
-          {{/each}}
-        {{/each}}
-      </p>
-    {{/each}}
-  {{/with}}
-</div>
+<main>
+  <body>
+    <section class='p-4 pt-0'>
+      {{#with web}}
+        <div class='text-center my-4'>
+          <h1>languages: </h1>
+        </div>
+        <div class="row">
+          {{#each languages}}
+            <div class="col-4">
+              <div class='card mb-2'>
+                <div class='card-header'>
+                  <h2>{{name}}</h2>
+                  {{version}}<br />
+                  {{description}}
+                </div>
+                <div
+                  class='card body p-2'
+                  style='background-color:#f1f1ef;'
+                >
+                  {{#if elements}}<h3>elements: </h3>{{/if}}
+                  {{#each elements}}
+                    <div
+                      class='card mt-2 p-2 mb-2'
+                      style='background-color:#c6c6c3;'
+                    >
+                      <h3><b>{{name}}</b></h3>
+                      <p>{{description}}</p>
+                      <div
+                        class='card mt-2 p-2'
+                        style='background-color:#f1f1ef;'
+                      >
+                        {{#if attributes}}<h3>attributes:</h3>{{/if}}
+                        {{#each attributes}}
+                          <div
+                            class='card mt-2 p-2'
+                            style='background-color:#c6c6c3;'
+                          >
+                              <h4>{{name}}</h4>
+                              </p>{{description}}</p>
+                          </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                  {{/each}}
+                  {{#if properties}}<h3>properties: </h3>{{/if}}
+                  {{#each properties}}
+                    <div
+                      class='card mt-2 p-2 mb-2'
+                      style='background-color:#c6c6c3;'
+                    >
+                      <h3><b>{{name}}</b></h3>
+                      <p>{{description}}</p>
+                      <div
+                        class='card mt-2 p-2'
+                        style='background-color:#f1f1ef;'
+                      >
+                        {{#if values}}<h3>values:</h3>{{/if}}
+                        {{#each values}}
+                          <div
+                            class='card mt-2 p-2'
+                            style='background-color:#c6c6c3;'
+                          >
+                              <h4>{{value}}</h4>
+                              </p>{{description}}</p>
+                          </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                  {{/each}}{{#if functions}}<h3>functions: </h3>{{/if}}
+                  {{#each functions}}
+                    <div
+                      class='card mt-2 p-2 mb-2'
+                      style='background-color:#c6c6c3;'
+                    >
+                      <h3><b>{{name}}</b></h3>
+                      <p>{{description}}</p>
+                      <div
+                        class='card mt-2 p-2'
+                        style='background-color:#f1f1ef;'
+                      >
+                        {{#if parameters}}<h3>parameters:</h3>{{/if}}
+                        {{#each parameters}}
+                          <div
+                            class='card mt-2 p-2'
+                            style='background-color:#c6c6c3;'
+                          >
+                              <h4>{{name}}</h4>
+                              <a>type: {{type}}</a>
+                              </a>{{description}}</a>
+                          </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          {{/each}} 
+        </div>
+      {{/with}}
+    </section>
+  </body>
+</main>

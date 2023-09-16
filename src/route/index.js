@@ -5,22 +5,22 @@ const router = express.Router()
 // ================================================================
 var header = {
   name: {
-    firstname: 'Taras',
-    lastname: 'Bulba',
+    firstname: 'Oleksadr',
+    lastname: 'Shvab',
   },
   position: 'Junior Fullstack JS Developer',
-  salary: '600$ в місяц',
+  salary: '600-900$ в місяц',
   address: 'місто Київ, Україна',
 }
 var footer = {
   social: {
     email: {
-      text: 'dmytro@mail.com',
-      href: 'mailto:dmytro@mail.com',
+      text: 'docshvab@mail.com',
+      href: 'mailto:docshvab@mail.com',
     },
     phone: {
-      text: '+380670000123',
-      href: 'tel:+380670000123',
+      text: '+380667216035',
+      href: 'tel:+380667216035',
     },
     LinkedIn: {
       text: 'LinkedIn',

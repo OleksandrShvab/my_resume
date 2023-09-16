@@ -1,93 +1,129 @@
-<div>
-  <div>
-    <h1>{{name}}</h1>
-  </div>
-
-  <hr />
-
-  <div>
-    <h2>users</h2>{{#each users}}
-
-      <hr />
-
-      <div>
-        <b>id: </b>{{id}}<br />
-        <b>name: </b>{{name}}<br />
-        <b>gender: </b>{{gender}}<br />
-        <b>age: </b>{{age}}<br />
+<main>
+  <body>
+    <section class='p-4 pt-0'>
+      <div class='text-center my-4'>
+        <h1>facebook</h1>
       </div>
-      
-      <br />
-
-      <div>
-        {{#if friends}}<h3>friends</h3>{{/if}}
-        {{#each friends}}
-          <b>id: </b>{{id}}<br />
-          <b>name: </b>{{name}}<br />
-          <b>gender: </b>{{gender}}<br />
-          <b>age: </b>{{age}}<br />
-      </div>
-      
-        <br />
-
-      <div>
-        {{#if mutual_friends}}<h3>mutual_friends</h3>{{/if}}
-        {{#each mutual_friends}}
-          <b>id: </b>{{id}}<br />
-          <b>name: </b>{{name}}<br />
-          <b>gender: </b>{{gender}}<br />
-          <b>age: </b>{{age}}<br />
-          <br />
-        
-        {{#if mutual_friends}}<h3>mutual_friends</h3>{{/if}}
-        {{#each mutual_friends}}
-          <b>id: </b>{{id}}<br />
-          <b>name: </b>{{name}}<br />
-          <b>gender: </b>{{gender}}<br />
-          <b>age: </b>{{age}}<br />
-          <br />
-        {{/each}}
-        {{/each}}
-        
-      </div>
-
-      <div>
-        {{#if groups}}<h3>groups</h3>{{/if}}
-        {{#each groups}}
-          <b>id: </b>{{id}}<br />
-          <b>name: </b>{{name}}<br />
-          <b>description: </b>{{description}}<br />
-          <b>age: </b>{{age}}<br />
-          <br />
-          {{#if members}}<h3>members</h3>{{/if}}
-          {{#each members}}
-            <b>id: </b>{{id}}<br />
-            <b>name: </b>{{name}}<br />
-            <b>gender: </b>{{gender}}<br />
-            <b>age: </b>{{age}}<br /><br />
-      </div>
+      {{#each users}}
+        <div
+          class='card mt-4 p-4'
+          style='background-color:#fffff2;'
+        >
+          <div class='card header mb-4'>
+            <h3>users</h3>
+          </div>
+          <div>
+            <b>{{name}}</b><br />
+            <a>id: <b>{{id}}</b></a><br />
+            <a>gender: <b>{{gender}}</b></a><br />
+            <a>age: <b>{{age}}</b></a>
+          </div>
+          {{#each friends}}
+            <div
+              class='card mt-4 p-4'
+              style='background-color:#f1f1ef;'
+            >
+              <h3>friend</h3>
+              <div class='my-4'>
+                <b>{{name}}</b><br />
+                <a>id: <b>{{id}}</b></a><br />
+                <a>gender: <b>{{gender}}</b></a><br />
+                <a>age: <b>{{age}}</b></a>
+              </div>
+              <div
+                class='card px-4'
+                style='background-color:#fffff2;'
+              >
+                <h4 class='mt-4'>mutual_friends</h4>
+                {{#each mutual_friends}}
+                  <div class='mb-4'>
+                    <b>{{name}}</b><br />
+                    <a>id: <b>{{id}}</b></a><br />
+                    <a>gender: <b>{{gender}}</b></a><br />
+                    <a>age: <b>{{age}}</b></a>
+                  </div>
+                  {{#if mutual_friends}}
+                    <div
+                      class='card mb-4 px-4'
+                      style='background-color:#f1f1ef;'
+                    >
+                      <h4 class='mt-4'>mutual_friends</h4>
+                      {{#each mutual_friends}}
+                        <div class='mb-4'>
+                          <b>{{name}}</b><br />
+                          <a>id: <b>{{id}}</b></a><br />
+                          <a>gender:
+                            <b>{{gender}}</b></a><br />
+                          <a>age: <b>{{age}}</b></a>
+                        </div>
+                      {{/each}}
+                    </div>
+                  {{/if}}
+                {{/each}}
+              </div>
+            </div>
+            {{#if groups}}
+              {{#each groups}}
+                <div
+                  class='card mt-4 p-4'
+                  style='background-color:#f1f1ef;'
+                >
+                  <h3>groups</h3>
+                  <div class='my-4'>
+                    <b>{{name}}</b><br />
+                    <a>id: <b>{{id}}</b></a><br />
+                    <b>description:</b>
+                    <a>{{description}}</a>
+                    <h3 class='mt-4'>members</h3>
+                    {{#each members}}
+                      <div
+                        class='card m-4 p-4'
+                        style='background-color:#fffff2;'
+                      >
+                        <div class='mb-4'>
+                          <b>{{name}}</b><br />
+                          <a>id: <b>{{id}}</b></a><br />
+                          <a>gender:
+                            <b>{{gender}}</b></a><br />
+                          <a>age: <b>{{age}}</b></a>
+                        </div>
+                      </div>
+                    {{/each}}
+                  </div>
+                </div>
+              {{/each}}
+            {{/if}}
           {{/each}}
+        </div>{{#each groups}}
+          <div
+            class='card mt-4 p-4'
+            style='background-color:#f1f1ef;'
+          >
+            <h3>groups</h3>
+            <div class='my-4'>
+              <b>{{name}}</b><br />
+              <a>id: <b>{{id}}</b></a><br />
+              <b>description:</b>
+              <a>{{description}}</a>
+              <h3 class='mt-4'>members</h3>
+              {{#each members}}
+                <div
+                  class='card mt-4 p-4'
+                  style='background-color:#fffff2;'
+                >
+                  <div class='mb-4'>
+                    <b>{{name}}</b><br />
+                    <a>id: <b>{{id}}</b></a><br />
+                    <a>gender:
+                      <b>{{gender}}</b></a><br />
+                    <a>age: <b>{{age}}</b></a>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
         {{/each}}
-        {{/each}}
-
-      <div>
-        {{#if groups}}<h3>groups</h3>{{/if}}
-        {{#each groups}}
-          <b>id: </b>{{id}}<br />
-          <b>name: </b>{{name}}<br />
-          <b>description: </b>{{description}}<br />
-
-          <br />
-
-          {{#if members}}<h3>members</h3>{{/if}}
-          {{#each members}}
-            <b>id: </b>{{id}}<br />
-            <b>name: </b>{{name}}<br />
-            <b>gender: </b>{{gender}}<br />
-            <b>age: </b>{{age}}<br /><br />
-          {{/each}}
-          {{/each}}
-      </div>
-    {{/each}}
-  </div>
-</div>
+      {{/each}}
+    </section>
+  </body>
+</main>

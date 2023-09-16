@@ -1,29 +1,41 @@
-<div>
-  {{#with main}}
-    <main>
-      <section>
-        
-        {{> title data="My education" big=true}}
-        <ul>
-        {{#each educations}}
-          <li>
-            {{name}}
-            {{#unless isEnd}} (ще в процесі) {{/unless}}
-          </li>
-        {{/each}}
-        </ul>
-      </section>
-      <section>
-        {{> title data="My certificates"}}
-        <ul>
-        {{#each certificates}}
-          <li>
-            {{name}}
-            ({{id}})
-          </li>
-        {{/each}}
-        </ul>
-      </section>
-    </main>
-  {{/with}}
-</div>
+<main>
+  <body>
+    <header class="mb-5">
+      {{#with page}}
+        <h2>{{title}}</h2>
+      {{/with}}
+    </header>
+    <section>
+      {{#with main}}
+        <div
+          class='card mb-4 p-4'
+          style='background-color:#e8ebcb;'
+        >
+          {{> title data="My education" big=true}}
+          <ul>
+            {{#each educations}}
+              <li>
+                {{name}}
+                {{#unless isEnd}} (ще в процесі) {{/unless}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div
+          class='card mb-4 p-4'
+          style='background-color:#e8ebcb;'
+        >
+          {{> title data="My certificates"}}
+          <ul>
+            {{#each certificates}}
+              <li>
+                {{name}}
+                ({{id}})
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/with}}
+    </section>
+  </body>
+</main>

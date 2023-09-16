@@ -1,24 +1,37 @@
-<div>
-  {{#with main}}
-    <main>
-      <section class="mb-3">
-        {{> title data="Summary" big=true}}
+<main>
+  <body>
+    <header class="mb-5">
+      {{#with page}}
+        <h2>{{title}}</h2>
+      {{/with}}
+    </header>
+    <section>
+      {{#with main}}
+        <div
+          class='card mb-4 p-4'
+          style='background-color:#e8ebcb;'
+        >
+          {{> title data="Summary" big=true}}
           <div>
             <p>
               {{summary.text}}
             </p>
           </div>
-      </section>
-      {{#with experience}}
-        <section>
-          {{> title data="Experience"}}
-          <div>
-            <p>
-              {{text}}
-            </p>
+        </div>
+        {{#with experience}}
+          <div
+            class='card mb-4 p-4'
+            style='background-color:#e8ebcb;'
+          >
+            {{> title data="Experience"}}
+            <div>
+              <p>
+                {{text}}
+              </p>
+            </div>
           </div>
-        </section>
         {{/with}}
-    </main>
-  {{/with}}
-</div>
+      {{/with}}
+    </section>
+  </body>
+</main>
